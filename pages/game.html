@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="cards">
+        </ul>
+    </div>
+
+    <!-- code for  side-bar  -->
+    <div class="container">
+        <header class="header-bar">
+            <h2>khemchand</h2>
+            <div class="score">
+                <h2 id="score">Score: 00</h2>
+            </div>
+        </header>
+        <div class="row">
+            <header class="header">
+                <h2>players'name</h2>
+                <h2>Turn</h2>
+                <h2>Score</h2>
+            </header>
+        </div>
+
+        <!-- code for moves-mode -->
+        <div class="moves-page">
+            <h3>Your Remaining Lifes</h>
+                <div class="circles">
+                </div>
+        </div>
+
+        <!-- code for time-mode -->
+        <div class="timer-page">
+            <img src="../assests/timer.png" alt="download images" class="timer-image">
+            <h1 class="timer">00:00</h1>
+        </div>
+
+        <!-- code for multiplayer mode -->
+        <div class="multiplayer">
+            <div class="players-data">
+            </div>
+        </div>
+        <div class="back-button">
+            <button onclick="backButton();">Back</button>
+        </div>
+
+    </div>
+    <script src="../javascript/game.js"></script>
+</body>
+
+</html>

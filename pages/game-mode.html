@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/game-mode.css">
+    <title>Game Mode</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="box">
+                <div class="imgage"> <img src="../assests/game-menu-images/memory card image.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Time Mode</h3>
+                    <a href="../pages/game-startup.html">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="imgage"> <img src="../assests/game-menu-images/tictactoe.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Moves Mode</h3>
+                    <a href="../ticTacToe/ticTacToe.html">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="imgage"> <img src="../assests/game-menu-images/IMG-20220614-WA0003.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Multiplayer</h3>
+                    <a href="#" onclick="alert('Sorry This Game Is Not Available Right Now')">Play Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mode-selection">
+
+        <div class="card">
+            <header>
+                <div class="modes">
+                    <div class="mode" onclick="addActive(this); showOptions_1();">
+                        <h2>Time Mode</h2>
+                    </div>
+                    <div class="mode" onclick="addActive(this); showOptions_2(this.value);">
+                        <h2>Multiplayer</h2>
+                    </div>
+                    <div class="mode" onclick="addActive(this); showOptions_3(this.value);">
+                        <h2>Moves Mode</h2>
+                    </div>
+                </div>
+            </header>
+            <div class="box">
+                <div class="content time-mode">
+                    <h3>Enter Time In Sec</h3>
+                    <input type="Number" value="30" class="time-value">
+                </div>
+                <div class="content multiplayer">
+                    <h3>Enter Players</h3>
+                    <input type="Number" value="2" class="players">
+                </div>
+                <div class="content moves-mode">
+                    <h3>Enter Lifes</h3>
+                    <input type="Number" value="3" class="moves">
+                </div>
+                <div class="content grid">
+                    <h3>Enter Grid</h3>
+                    <input type="Number" value="2" class="height">
+                    <input type="Number" value="2" class="width">
+                </div>
+                <div class="content play-button">
+                    <a href="./game.html" onclick="valueSender();">Play Now</a>
+                </div>
+                <div class="content preselect">
+                    <h3>Please Select A Mode To Continue</h3>
+                </div>
+            </div>
+        </div>
+        <div class="cencel-button" onclick="window.history.back();">
+            <button>X</button>
+        </div>
+    </div>
+    <script src="../javascript/game-mode.js">
+    </script>
+</body>
+
+</html>

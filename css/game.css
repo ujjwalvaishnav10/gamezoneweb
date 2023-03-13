@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.wrapper {
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.cards,
+.card,
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.card.shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-13px);
+    }
+    40% {
+        transform: translateX(13px);
+    }
+    60% {
+        transform: translateX(-8px);
+    }
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.cards .card .view {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s linear;
+    backface-visibility: hidden;
+}
+
+.card .back-view img {
+    max-width: 45px;
+}
+
+.card .front-view span {
+    font-size: 40px;
+    color: blue;
+}
+
+.card .back-view {
+    transform: rotateY(-180deg);
+}
+
+.card.flip .front-view {
+    transform: rotateY(180deg);
+}
+
+.card.flip .back-view {
+    transform: rotateY(0);
+}
+
+
+/* timer page css */
+
+.timer-page,
+.moves-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    padding: 25px;
+    text-align: center;
+    height: 80%;
+}
+
+.timer-image {
+    width: 50px;
+    margin: 10px;
+}
+
+.timer {
+    padding: 5px;
+}
+
+
+/*  styling for moves mode elements */
+
+.moves-page {
+    display: none;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    /* background-color: black; */
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 10px;
+}
+
+
+/* css for multiplayer mode */
+
+.container {
+    height: 500px;
+    width: 400px;
+    margin: 0 50px;
+    /* background-color: #fff; */
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+    box-shadow: 3px 3px 5px #ffff, -1px -1px 3px #ffffff;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+}
+
+.player {
+    background-color: pink;
+}
+
+.multiplayer {
+    height: 80%;
+    flex-direction: column;
+    display: none;
+    overflow: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+header div {
+    text-align: left;
+}
+
+.time,
+.player-name {
+    margin: 10px;
+}
+
+.player-name {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 8px;
+}
+
+.player-name p {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    margin: 0 30px;
+}
+
+.back-button button {
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: pink;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.back-button button:hover {
+    background-color: red;
+    color: #ffff;
+}
+
+header,
+.col {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+header h2,
+.col h2 {
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+}
+
+header {
+    color: aliceblue;
+    border-bottom: 1px solid black;
+    display: none;
+}
+
+.yourTurn {
+    background-color: red;
+    border-radius: 7px;
+    box-shadow: 0 0 50px 10px (rgba(0, 0, 0, 0.5));
+    transform: scaleZ(1.2);
+}

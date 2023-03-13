@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #ebf5fc; */
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.card {
+    position: relative;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05), inset -5px -5px 5px rgba(225, 225, 225, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(225, 225, 225, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    flex-direction: column;
+}
+
+.card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+}
+
+.card:hover .box .content h2 {
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.card .box .content h3 {
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card .box .content p {
+    font-size: 1em;
+    font-weight: 300;
+    columns: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card:hover .box .content h3,
+.card:hover .box .content p {
+    color: #fff;
+}
+
+.card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .box .content a:hover {
+    background: #ff568f;
+}
+
+img {
+    height: 40vh;
+}
+
+.mode-selection {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .box .content input {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+
+/*  style for mode selection popup */
+
+.mode-selection .card {
+    width: 90%;
+    height: 95%;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+.mode-selection .card .box {
+    transform: translateY(0px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+    margin-top: 10%;
+}
+
+
+/* .mode-selection .card .box .content h2 {
+    color: rgba(0, 0, 0, 0.05);
+} */
+
+.mode-selection .card .box .content h3,
+.mode-selection .card .box .content p {
+    color: #fff;
+}
+
+
+/* style for cencel btn */
+
+.cencel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.cencel-button button {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* font-size: 25px; */
+    border: none;
+    outline: none;
+}
+
+.cencel-button button:hover {
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+    color: #fff;
+}
+
+
+/*  css for header */
+
+header {
+    width: 100%;
+    position: relative;
+    top: 5%;
+    z-index: 1;
+}
+
+header .modes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .modes .mode {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+header .modes .active,
+header .modes .mode:hover {
+    background: #ff568f;
+}
+
+header .modes .active {
+    background: #ff568f;
+    transform: translateY(50px);
+}
+
+
+/* .mode-selection .box .content {
+    display: none;
+} */
+
+
+/* .time-mode,
+.multiplayer,
+.moves-mode, */
+
+.content {
+    display: none;
+}
+
+.showOptions {
+    display: inline;
+}
+
+.preselect {
+    display: inline;
+}
